@@ -23,6 +23,7 @@
   "rules": {
     "camelcase": "off",
     "import/no-unresolved": "error",
+    "no-use-before-define": ["error", {"functions": false, "classes": false}],
     "prettier/prettier": [
       "error",
       {
