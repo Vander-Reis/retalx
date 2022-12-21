@@ -1,4 +1,5 @@
 import express from "express";
+import { SwaggerTheme } from "swagger-themes";
 import swaggerUi from "swagger-ui-express";
 
 import { router } from "./routes";
@@ -8,7 +9,10 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
+const theme = new SwaggerTheme("v3");
+const optionsV1 = theme.getDefaultConfig("dark");
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile, optionsV1));
 
 app.use(router);
 
