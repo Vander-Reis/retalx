@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\vande\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @types/swagger-themes -D
+  C:\Program Files\nodejs\node.exe C:\Users\vande\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add typeorm@0.2.45
 
 PATH: 
-  C:\Users\vande\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\vande\bin;C:\Oracle\product\19.0.0\client_1\bin;D:\app\vande\product\19.0.0\client_1\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\app\client\vande\product\19.0.0\client_1\bin;D:\app\client\vande\product\12.2.0\client_2\bin;D:\app\client\vande\product\12.2.0\client_1;D:\app\client\vande\product\12.2.0\client_1\bin;C:\product\12.2.0\client_1;C:\product\12.2.0\client_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files\dotnet;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0;%SYSTEMROOT%\System32\OpenSSH;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\vande\AppData\Local\Microsoft\WindowsApps;C:\Users\vande\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\vande\AppData\Roaming\npm;C:\Users\vande\.dotnet\tools;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Users\vande\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\vande\bin;C:\Oracle\product\19.0.0\client_1\bin;D:\app\vande\product\19.0.0\client_1\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\app\client\vande\product\19.0.0\client_1\bin;D:\app\client\vande\product\12.2.0\client_2\bin;D:\app\client\vande\product\12.2.0\client_1;D:\app\client\vande\product\12.2.0\client_1\bin;C:\product\12.2.0\client_1;C:\product\12.2.0\client_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files\dotnet;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\vande\AppData\Local\Microsoft\WindowsApps;C:\Users\vande\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\vande\AppData\Roaming\npm;C:\Users\vande\.dotnet\tools;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.22.19
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fswagger-themes: Not found
-      at Request.params.callback [as _callback] (C:\Users\vande\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
-      at Request.self.callback (C:\Users\vande\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
-      at Request.emit (node:events:527:28)
-      at Request.<anonymous> (C:\Users\vande\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141862:10)
-      at Request.emit (node:events:527:28)
-      at IncomingMessage.<anonymous> (C:\Users\vande\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141784:12)
-      at Object.onceWrapper (node:events:641:28)
-      at IncomingMessage.emit (node:events:539:35)
-      at endReadableNT (node:internal/streams/readable:1345:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  Error: EPERM: operation not permitted, unlink 'D:\ignite\Node\ApiNodeTS\node_modules\.bin\ts-node-dev'
 
 npm manifest: 
   {
@@ -33,7 +23,7 @@ npm manifest:
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-      "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+      "dev": "ts-node-dev --poll --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
     },
     "dependencies": {
       "@types/multer": "^1.4.7",
