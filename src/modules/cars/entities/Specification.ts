@@ -1,5 +1,6 @@
 import { v4 as uuidV4 } from "uuid";
 
+@Entity("specification")
 class Specification {
   id?: string;
 
