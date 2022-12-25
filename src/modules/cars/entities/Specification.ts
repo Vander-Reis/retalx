@@ -1,7 +1,9 @@
+import { Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
 @Entity("specification")
 class Specification {
+  @PrimaryColumn()
   id?: string;
 
   name: string;
