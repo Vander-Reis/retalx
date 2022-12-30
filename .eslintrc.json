@@ -1,6 +1,6 @@
 {
   "env": {
-    "es2020": true,
+    "es2020": true, 
     "node": true,
     "jest": true
   },
@@ -63,7 +63,7 @@
         "newlinesBetween": "always",
         "groups": [
           "module",
-          "/^@shared/",
+          "/^@/",
           [
             "parent",
             "sibling",
