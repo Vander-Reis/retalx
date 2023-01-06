@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\vande\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add cross-env
+  C:\Program Files\nodejs\node.exe C:\Users\vande\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add ts-jest
 
 PATH: 
   C:\Users\vande\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\vande\bin;C:\Oracle\product\19.0.0\client_1\bin;D:\app\vande\product\19.0.0\client_1\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\app\client\vande\product\19.0.0\client_1\bin;D:\app\client\vande\product\12.2.0\client_2\bin;D:\app\client\vande\product\12.2.0\client_1;D:\app\client\vande\product\12.2.0\client_1\bin;C:\product\12.2.0\client_1;C:\product\12.2.0\client_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files\dotnet;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\vande\AppData\Local\Microsoft\WindowsApps;C:\Users\vande\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\vande\AppData\Roaming\npm;C:\Users\vande\.dotnet\tools;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -31,6 +31,7 @@ npm manifest:
     "dependencies": {
       "@types/multer": "^1.4.7",
       "bcryptjs": "^2.4.3",
+      "cross-env": "^7.0.3",
       "csv-parse": "^5.3.3",
       "dayjs": "^1.11.7",
       "express": "^4.18.2",
@@ -39,12 +40,12 @@ npm manifest:
       "multer": "^1.4.5-lts.1",
       "pg": "^8.8.0",
       "reflect-metadata": "^0.1.13",
+      "supertest": "^6.3.3",
       "swagger-themes": "^1.2.22",
       "swagger-ui-express": "^4.6.0",
       "tsyringe": "^4.7.0",
       "typeorm": "0.2.45",
-      "uuid": "^9.0.0",
-      "supertest": "^6.3.3"
+      "uuid": "^9.0.0"
     },
     "devDependencies": {
       "@types/bcryptjs": "^2.4.2",
@@ -1601,7 +1602,14 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
     integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
   
-  cross-spawn@^7.0.2, cross-spawn@^7.0.3:
+  cross-env@^7.0.3:
+    version "7.0.3"
+    resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
+    integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
+    dependencies:
+      cross-spawn "^7.0.1"
+  
+  cross-spawn@^7.0.1, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     version "7.0.3"
     resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
     integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
