@@ -86,10 +86,10 @@ class CarsRepository implements ICarsRepository {
   }
 
   async listAllCars(): Promise<Car[]> {
-    const car = this.repository
-      .query(`SELECT cars.*, cars_image.* FROM cars cars
-    LEFT JOIN cars_image cars_image ON cars_image.car_id = cars.id
-`);
+    const car = await this.repository.find({
+      relations: ["images"],
+    });
+
     return car;
   }
 }

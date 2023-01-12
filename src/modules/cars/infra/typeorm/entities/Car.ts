@@ -6,12 +6,14 @@ import {
   JoinTable,
   ManyToMany,
   ManyToOne,
+  OneToMany,
   PrimaryColumn,
 } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
 import { Category } from "@modules/cars/infra/typeorm/entities/Category";
 
+import { CarImage } from "./CarImage";
 import { Specification } from "./Specification";
 
 @Entity("cars")
@@ -21,6 +23,9 @@ class Car {
 
   @Column()
   name: string;
+
+  @OneToMany(() => CarImage, (carImage) => carImage.car)
+  images: CarImage[];
 
   @Column()
   description: string;

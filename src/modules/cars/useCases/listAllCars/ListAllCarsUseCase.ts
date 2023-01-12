@@ -11,7 +11,9 @@ class ListAllCarsUseCase {
   ) {}
 
   async execute(): Promise<Car[]> {
-    return this.carsRepository.listAllCars();
+    const car = await this.carsRepository.listAllCars();
+
+    return car;
   }
 }
 
